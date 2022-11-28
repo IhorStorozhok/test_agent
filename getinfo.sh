@@ -503,7 +503,7 @@ do
     \"MONITOR_INTERVAL\":\"${HOTHOST_MONITOR_INTERVAL}\"
   }"
 
- curl --silent --show-error 2>&1 | ts | while read line; do echo ${line} ℹ️ HostInfo; done\
+ curl --silent --show-error 2>&1 | ts | while read line; do echo ${line} ℹ️ HostInfo; done \
    -X POST $HOTHOST_SERVER_BASE/api/data/$HOTHOST_AGENT_SECRET \
    -H 'Content-Type: application/json' \
    -d "$JSON_DATA" \
