@@ -503,12 +503,12 @@ do
     \"MONITOR_INTERVAL\":\"${HOTHOST_MONITOR_INTERVAL}\"
   }"
 
- curl \
+ curl --silent --show-error 2>&1 | ts | while read line; do echo ${line} ℹ️ HostInfo; done\
    -X POST $HOTHOST_SERVER_BASE/api/data/$HOTHOST_AGENT_SECRET \
    -H 'Content-Type: application/json' \
    -d "$JSON_DATA" \
    -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36'
-   --silent --show-error 2>&1 | ts | while read line; do echo ${line} ℹ️ HostInfo; done
+   
 
   curl --silent --output /dev/null --show-error --fail \
    -X POST $HOTHOST_SERVER_BASE/api/process/$HOTHOST_AGENT_SECRET \
