@@ -508,7 +508,7 @@ do
    -d "$JSON_DATA" \
    -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36'
 
-  curl --silent --output /dev/null --show-error --fail \
+  curl --silent --show-error 2>&1 | ts | while read line; do echo ${line} ℹ️ HostInfo; done --fail \
    -X POST $HOTHOST_SERVER_BASE/api/process/$HOTHOST_AGENT_SECRET \
    -H 'Content-Type: application/json' \
    -d "$PROC_DATA" \
