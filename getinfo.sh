@@ -456,6 +456,7 @@ do
   PROC_DATA="{
     \"IS_RESTART\":\"${IS_RESTART}\",
     \"SYSTEM_FREE_RAM\":\"${FREE_RAM}\",
+    \"SYSTEM_TOTAL_RAM\":\"${TOTAL_RAM}\",
     \"PROCESS\":"{$JSON_PROCESS}"
   }"
   JSON_DATA="{
