@@ -455,9 +455,7 @@ do
   PROC="{$JSON_PROCESS}"
   PROC_DATA="{
     \"IS_RESTART\":\"${IS_RESTART}\",
-    \"PROCESS\":\"{$JSON_PROCESS}\",
-    \"SYSTEM_TOTAL_RAM\":\"${TOTAL_RAM}\",
-    \"SYSTEM_FREE_RAM\":\"${FREE_RAM}\"
+    \"PROCESS\":\"{$JSON_PROCESS}\"    
   }"
   JSON_DATA="{
     \"CONTAINER_OS_NAME\":\"${CONTAINER_NAME}\",
