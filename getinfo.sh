@@ -439,7 +439,7 @@ do
     TOTAL_SWAP="$((TOTAL_SWAP * 1024))"
     FREE_SWAP="$((FREE_SWAP * 1024))"
    elif [ true ]; then
-   echo "there is no conditions" 
+   echo "${KERNEL_NAME}"
   fi
 
   # Detect process RSS information  
