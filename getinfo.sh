@@ -438,6 +438,8 @@ do
     FREE_RAM="$((FREE_RAM * 1024))"
     TOTAL_SWAP="$((TOTAL_SWAP * 1024))"
     FREE_SWAP="$((FREE_SWAP * 1024))"
+   elif [ true ]; then
+   echo "there is no conditions" 
   fi
 
   # Detect process RSS information  
